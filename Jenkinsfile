@@ -10,13 +10,13 @@ steps
 	git branch: 'master', url: 'https://github.com/amitkum2/maven-project'
 }
 }
-	stage('Validate')
+	stage('Archive the artifacts')
 {
 steps
 {
 withMaven(jdk:'java_local', maven:'local_maven')
 	{
-		sh 'mvn validate'
+		sh 'mvn package'
 	}
 }
 }
