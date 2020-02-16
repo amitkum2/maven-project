@@ -27,5 +27,12 @@ steps
 archiveArtifacts '**/*.war'
 }
 }
+			stage('Deploy the artifacts')
+{
+steps
+{
+deploy adapters: [tomcat7(credentialsId: 'Tomcat', path: '', url: 'http://172.31.32.254:8080')], contextPath: null, war: '**/*.war'
+}
+}
 }
 }
