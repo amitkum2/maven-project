@@ -7,7 +7,7 @@ stage('SCM Checkout')
 {
 steps
 {
-	branch : master, 'git 'https://github.com/amitkum2/maven-project''
+	git branch: 'master', url: 'https://github.com/amitkum2/maven-project'
 }
 }
 }
