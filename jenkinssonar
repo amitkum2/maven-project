@@ -16,10 +16,10 @@ steps
 {
 withMaven(jdk:'java_local', maven:'local_maven')
 	{
-	withSonarQubeEnv(installationName:'sonar2',credentialsId: 'sonar2') 
+	withSonarQubeEnv('sonar2') 
 	
 	{
-		sh 'mvn clean install sonar:sonar'
+		sh 'mvn install sonar:sonar'
 	}
 }
 }
