@@ -1,0 +1,24 @@
+pipeline
+{
+agent any
+stages
+{
+stage('SCM Checkout')
+{
+steps
+{
+	git branch: 'master', url: 'https://github.com/amitkum2/maven-project'
+}
+}
+	stage('Build the artifacts')
+{
+steps
+{
+withSonarQubeEnv(credentialsId: 'Sonarqube')
+{withMaven(jdk: 'java_local', maven: 'local_maven') 
+{
+sh 'clean mvn install' sonar:sonar
+
+}}
+}
+}}}
