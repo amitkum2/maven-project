@@ -10,13 +10,13 @@ steps
 	git branch: 'master', url: 'https://github.com/amitkum2/maven-project'
 }
 }
-	stage('Build the artifacts')
+	stage('Sonar and maven')
 {
 steps
 {
 withMaven(jdk:'java_local', maven:'local_maven')
 	{
-	withSonarQubeEnv(credentialsId: 'sonar2') 
+	withSonarQubeEnv(installationName:'sonar2',credentialsId: 'sonar2') 
 	
 	{
 		sh 'mvn clean install sonar:sonar'
