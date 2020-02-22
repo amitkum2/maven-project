@@ -19,7 +19,7 @@ withMaven(jdk:'java_local', maven:'local_maven')
 	withSonarQubeEnv(credentialsId: 'sonar2') 
 	
 	{
-		sh 'mvn clean package sonar:sonar'
+		sh 'mvn clean install sonar:sonar'
 	}
 }
 }
