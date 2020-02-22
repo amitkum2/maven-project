@@ -16,7 +16,7 @@ steps
 {
 withMaven(jdk:'java_local', maven:'local_maven')
 	{
-	withSonarQubeEnv(credentialsId: 'Sonarqube')
+	withSonarQubeEnv(credentialsId: 'sonar2') 
 	
 	{
 		sh 'mvn clean package sonar:sonar'
