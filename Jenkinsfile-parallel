@@ -27,7 +27,7 @@ pipeline{
 
                     steps
                     {
-                    echo 'Deploying to Prod'
+                    ech 'Deploying to Prod'
                     }
                 }
             }
