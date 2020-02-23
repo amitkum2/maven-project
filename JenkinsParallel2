@@ -16,7 +16,7 @@ stage('Build the artifacts')
 {
 steps
 {
-withMaven(jdk:'java_local', maven:'local_maven')
+withMaven( maven:'local_maven')
 	{
 		sh 'mvn clean package'
 	}
@@ -25,7 +25,7 @@ withMaven(jdk:'java_local', maven:'local_maven')
 {
 steps
 {
-withMaven(jdk:'java_local', maven:'local_maven')
+withMaven( maven:'local_maven')
 	{
 		sh 'mvn clean compile'
 	}
