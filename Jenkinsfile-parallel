@@ -14,6 +14,14 @@ pipeline{
                     echo 'Deploying to QA'
                     }
                 }
+                stage('Deploy to Dev')
+                 {
+
+                    steps
+                    {
+                    echo 'Deploying to Dev'
+                    }
+                }
             }
 
         }
