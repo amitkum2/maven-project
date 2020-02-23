@@ -5,7 +5,7 @@ stages
 {
 stage('Parallel Deployment')
 {
-Parallel{
+parallel{
 stage('Deploy to QA'){
 
 steps
