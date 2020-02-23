@@ -5,7 +5,7 @@ pipeline{
         stage('Parallel Deployment')
         {
             parallel
-            {{
+            {
                  stage('Deploy to QA')
                  {
 
@@ -35,4 +35,4 @@ pipeline{
     }
         }
     }
-}}
+}
