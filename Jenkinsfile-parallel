@@ -1,29 +1,38 @@
-pipeline
-{
-agent any
-stages
-{
-stage('Parallel Deployment')
-{
-parallel{
-stage('Deploy to QA'){
+pipeline{
+    agent any
+    stages
+    {
+        stage('Parallel Deployment')
+        {
+            parallel
+            {{
+                 stage('Deploy to QA')
+                 {
 
-steps
-{
-	echo 'Deploying to QA'
-}}}
-{
-stage('Deploy to Dev'){
-
-steps
-{
-	echo 'Deploying to Dev'
-}}}
-{
-stage('Deploy to Prod'){
-
-steps
-{
-	echo 'Deploying to Prod'
-}}}
-}}}
+                    steps
+                    {
+                    echo 'Deploying to QA'
+                    }
+                }
+            }
+    {
+        stage('Deploy to Dev')
+        {
+             steps
+            {
+             echo 'Deploying to Dev'
+            }
+        }
+    }
+    {
+        stage('Deploy to Prod')
+        {
+        steps
+        {
+        echo 'Deploying to Prod'
+        }
+        }
+    }
+        }
+    }
+}}
