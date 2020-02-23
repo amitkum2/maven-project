@@ -22,7 +22,16 @@ pipeline{
                     echo 'Deploying to Dev'
                     }
                 }
+            stage('Deploy to Prod')
+                 {
+
+                    steps
+                    {
+                    echo 'Deploying to Prod'
+                    }
+                }
             }
+            
 
         }
         }
