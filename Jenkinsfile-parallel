@@ -10,20 +10,20 @@ stage('Deploy to QA'){
 
 steps
 {
-	echo Deploying to QA
+	echo 'Deploying to QA'
 }}}
 {
 stage('Deploy to Dev'){
 
 steps
 {
-	echo Deploying to Dev
+	echo 'Deploying to Dev'
 }}}
 {
 stage('Deploy to Prod'){
 
 steps
 {
-	echo Deploying to Prod
+	echo 'Deploying to Prod'
 }}}
 }}}
